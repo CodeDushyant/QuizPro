@@ -1,0 +1,184 @@
+/* Import Modern Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.exam-details {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 20px;
+  font-family: 'Inter', sans-serif;
+  color: #334155;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Base Card Style for all sections */
+.exam-info, .question-form, .question-list, .result-dashboard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+h2, h3 {
+  color: #0f172a;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* --- EXAM INFO SECTION --- */
+.exam-info p {
+  font-size: 1.05rem;
+  margin: 0.5rem 0;
+  color: #475569;
+}
+
+.exam-info b {
+  color: #1e293b;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-group button, .result-dashboard button {
+  background-color: #f8fafc;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-group button:hover, .result-dashboard button:hover {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+/* --- ADD QUESTION FORM --- */
+.question-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.question-form input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #334155;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.question-form input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.question-form button {
+  background-color: #10b981; /* Green color for Add Action */
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.question-form button:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+/* --- QUESTION LIST --- */
+.question-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.question-card {
+  background: #f8fafc;
+  border-left: 4px solid #3b82f6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.question-card:hover {
+  transform: translateX(4px);
+}
+
+.question-card p {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.question-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Puts options in a 2x2 grid */
+  gap: 0.8rem;
+}
+
+.question-card li {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* Responsive fixes for mobile */
+@media (max-width: 600px) {
+  .question-card ul {
+    grid-template-columns: 1fr; /* Single column options on small screens */
+  }
+  .btn-group {
+    flex-direction: column;
+  }
+}

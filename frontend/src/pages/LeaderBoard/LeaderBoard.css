@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f4f7fb;
+}
+
+/* ===========================
+   PAGE
+=========================== */
+
+.leaderboard-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 35px;
+  background: #fff;
+  border-radius: 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.leaderboard-container h2 {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 35px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===========================
+   CLOSE BUTTON
+=========================== */
+
+.close-btnL {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f1f5f9;
+  color: #475569;
+
+  font-size: 18px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.close-btnL:hover {
+  background: #ef4444;
+  color: #fff;
+  transform: rotate(180deg);
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 14px;
+}
+
+.leaderboard-table th {
+  padding: 0 18px 14px;
+  text-align: left;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.leaderboard-table td {
+  padding: 18px;
+
+  background: #fff;
+
+  border-top: 1px solid #edf2f7;
+  border-bottom: 1px solid #edf2f7;
+
+  transition: 0.3s;
+}
+
+.leaderboard-table tr td:first-child {
+  border-left: 1px solid #edf2f7;
+  border-radius: 14px 0 0 14px;
+}
+
+.leaderboard-table tr td:last-child {
+  border-right: 1px solid #edf2f7;
+  border-radius: 0 14px 14px 0;
+}
+
+/* Hover */
+
+.leaderboard-table tbody tr:hover td {
+  background: #f8fbff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.08);
+}
+
+/* ===========================
+   TOP 3
+=========================== */
+
+.rank-1 td {
+  background: #fffbea;
+}
+
+.rank-2 td {
+  background: #f8fafc;
+}
+
+.rank-3 td {
+  background: #fff7ed;
+}
+
+/* ===========================
+   RANK BADGE
+=========================== */
+
+.rank-badge {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 16px;
+
+  background: #e2e8f0;
+}
+
+.rank-1 .rank-badge {
+  background: linear-gradient(135deg, #fde047, #f59e0b);
+  color: #7c2d12;
+}
+
+.rank-2 .rank-badge {
+  background: linear-gradient(135deg, #f8fafc, #cbd5e1);
+  color: #334155;
+}
+
+.rank-3 .rank-badge {
+  background: linear-gradient(135deg, #fdba74, #ea580c);
+  color: white;
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.student-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.score-highlight {
+  color: #2563eb;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.date-text {
+  color: #64748b;
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+
+.no-data {
+  padding: 60px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  background: #f8fafc;
+
+  border-radius: 16px;
+
+  font-size: 18px;
+}
+
+/* ===========================
+   LOADING
+=========================== */
+
+.loading {
+  text-align: center;
+
+  padding: 80px;
+
+  font-size: 30px;
+
+  color: #2563eb;
+
+  font-weight: 700;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+  .leaderboard-container {
+    margin: 20px;
+
+    padding: 22px;
+  }
+
+  .leaderboard-container h2 {
+    font-size: 30px;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 14px;
+  }
+
+  .score-highlight {
+    font-size: 18px;
+  }
+
+  .close-btnL {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.close-btnL {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+
+  background: #ffffff;
+  color: #64748b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.close-btnL:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: white;
+  transform: rotate(180deg);
+}
+
+.close-btnL:active {
+  transform: scale(0.95);
+}
+
+/* ==========================
+   TOP 3 ROWS
+========================== */
+
+.rank-1 td {
+  background: linear-gradient(90deg, #fff8dc, #fffef7);
+  border-top: 2px solid #facc15;
+  border-bottom: 2px solid #facc15;
+}
+
+.rank-2 td {
+  background: linear-gradient(90deg, #f8fafc, #ffffff);
+  border-top: 2px solid #cbd5e1;
+  border-bottom: 2px solid #cbd5e1;
+}
+
+.rank-3 td {
+  background: linear-gradient(90deg, #fff7ed, #ffffff);
+  border-top: 2px solid #fb923c;
+  border-bottom: 2px solid #fb923c;
+}
+
+.rank-1 td:first-child,
+.rank-2 td:first-child,
+.rank-3 td:first-child {
+  border-left-width: 6px;
+}
+
+.rank-1 td:first-child {
+  border-left-color: #facc15;
+}
+
+.rank-2 td:first-child {
+  border-left-color: #94a3b8;
+}
+
+.rank-3 td:first-child {
+  border-left-color: #fb923c;
+}
+
+/* ==========================
+   MEDALS
+========================== */
+
+.rank-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  background: #f1f5f9;
+}
+
+.rank-1 .rank-badge {
+  background: linear-gradient(135deg, #fde047, #f59e0b);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.35);
+}
+
+.rank-2 .rank-badge {
+  background: linear-gradient(135deg, #f8fafc, #cbd5e1);
+  box-shadow: 0 8px 20px rgba(148, 163, 184, 0.3);
+}
+
+.rank-3 .rank-badge {
+  background: linear-gradient(135deg, #fdba74, #ea580c);
+  box-shadow: 0 8px 20px rgba(234, 88, 12, 0.3);
+}
+
+/* ==========================
+   TOP 3 NAME
+========================== */
+
+.rank-1 .student-name {
+  color: #b45309;
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.rank-2 .student-name {
+  color: #334155;
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.rank-3 .student-name {
+  color: #c2410c;
+  font-weight: 800;
+  font-size: 17px;
+}
+
+/* ==========================
+   SCORE
+========================== */
+
+.rank-1 .score-highlight {
+  color: #ca8a04;
+}
+
+.rank-2 .score-highlight {
+  color: #475569;
+}
+
+.rank-3 .score-highlight {
+  color: #ea580c;
+}
+
+/* ==========================
+   HOVER
+========================== */
+
+.rank-1:hover td,
+.rank-2:hover td,
+.rank-3:hover td {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}

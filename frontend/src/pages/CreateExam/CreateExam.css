@@ -1,0 +1,122 @@
+/* CreateExam.css */
+
+/* Background for the whole page/section */
+.create-exam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 70px); /* Adjust based on Navbar height */
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Modern dark gradient */
+  padding: 2rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Glassmorphism Form Container */
+.create-exam form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #ffffff;
+}
+
+.create-exam h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.create-exam label {
+  font-size: 0.9rem;
+  color: #b3b3b3;
+  margin-bottom: -0.5rem; /* Pulls label closer to input */
+  margin-top: 0.5rem;
+}
+
+/* Input Fields Styling */
+.create-exam input[type="text"],
+.create-exam input[type="number"],
+.create-exam input[type="datetime-local"],
+.create-exam textarea {
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Fixing calendar icon color for dark mode */
+.create-exam input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.create-exam textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Focus States */
+.create-exam input:focus,
+.create-exam textarea:focus {
+  outline: none;
+  border-color: #4facfe;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(79, 172, 254, 0.3);
+}
+
+/* Checkbox Alignment */
+.create-exam .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.create-exam .checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #4facfe;
+}
+
+/* Gradient Button */
+.create-exam button {
+  margin-top: 1.5rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.create-exam button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+}
+
+.create-exam button:active {
+  transform: translateY(0);
+}
